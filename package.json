@@ -14,6 +14,14 @@
     "type": "git",
     "url": "https://github.com/zrthxn/touchjs"
   },
+  "keywords": [
+    "touch",
+    "create",
+    "file",
+    "global",
+    "cli",
+    "node"
+  ],
   "author": "zrthxn",
   "license": "MIT"
 }

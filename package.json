@@ -1,5 +1,5 @@
 {
-  "name": "touchjs",
+  "name": "touch",
   "version": "1.0.2",
   "description": "A Node package for all your touching needs. Easily create empty files.",
   "main": "./index.js",

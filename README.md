@@ -1,4 +1,4 @@
-# PowerShell Touch
+# Node Touch CLI
 ### v1.0.0
 
 This is a small CLI to create empty files.<br>
@@ -11,7 +11,7 @@ other similar fields where a single project contains lots of files.
 ## Installation
 You will need to have installed Node for this to work. Open a terminal window anywhere and run :
 ```
-npm install -g touchjs
+npm install -g @zrthxn/touchjs
 ```
 
 ## Usage

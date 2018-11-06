@@ -1,7 +1,7 @@
 {
-  "name": "touchjs",
+  "name": "@zrthxn/touchjs",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Node package for all your touching needs. Easily create empty files.",
   "main": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,10 @@
   "bin": {
     "touchjs" : "./bin/touch.js"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zrthxn/touchjs"
+  },
+  "author": "zrthxn",
+  "license": "MIT"
 }

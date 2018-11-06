@@ -1,6 +1,6 @@
 {
   "name": "@zrthxn/touchjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Node package for all your touching needs. Easily create empty files.",
   "main": "./index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "preferGlobal": true,
   "bin": {
-    "touchjs" : "./bin/touch.js"
+    "touchjs": "./bin/touch.js"
   },
   "repository": {
     "type": "git",

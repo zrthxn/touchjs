@@ -1,5 +1,5 @@
 const fs = require('fs');
-const version = "v1.0.0";
+const version = 'v' + require('./package.json').version;
 var touch = function (file, extn, data) {
     var success = null, errors = null;
     try {

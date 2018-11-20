@@ -1,11 +1,14 @@
 # Node Touch CLI
-### v1.1.6
+### v1.1.7
 
 This is a small CLI to create empty files.<br>
 Touch is available in Linux systems and is a useful tool to create lots of files quickly. It's particularly helpful to web developers and 
 other similar fields where a single project contains lots of files.
 
 **Touch can create ANY type of file with ANY extension,** but it will be an empty file.
+
+This CLI will be particularly helpful to Windows users since Windows doesn't come with such a functionality. <br>
+Also, this was inspired from Borland's Touch CLI which used to come bundled with the Borland TurboC++ 4.5 compiler, but isn't available anymore on modern systems.
 
 
 ## Installation

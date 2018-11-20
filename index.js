@@ -19,7 +19,18 @@ var touch = function (file, extn, data) {
 }
 
 var helpDisp = function () {
-    console.log('ZRTHXN');
+    console.log('ZRTHXN Labs Touch Version ' + version);
+    console.log('Custom Command Line Tools [ Node ]');
+    console.log('');
+    console.log('  Touch Help');
+    console.log('');
+    console.log('      Syntax');
+    console.log('      >   touch [flags] [extns] [args]');
+    console.log('');
+    console.log('  The following flags are currently available with Touch');
+    console.log('  --help or -h :      Display Help Menu');
+    console.log('  --extn or -e :      Use a common extension for all the following files. Supply the extension after the flag. Eg : touch -e .txt file_1 file_2 file_3');
+    console.log('');
 }
 
 var versionDisp = function (type, callback) {

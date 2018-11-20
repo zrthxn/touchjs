@@ -1,5 +1,5 @@
 # Node Touch CLI
-### v1.0.5
+### v1.1.6
 
 This is a small CLI to create empty files.<br>
 Touch is available in Linux systems and is a useful tool to create lots of files quickly. It's particularly helpful to web developers and 

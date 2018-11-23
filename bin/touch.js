@@ -27,7 +27,7 @@ for(let i=0; i<args.length; i++) {
             extn = args[i+1];
             i+=2;
             while(!(args[i]==='-e' || args[i]==='--extn' || args[i]==='--logs') && i<args.length) {
-                var result = touchjs.touch(args[i], extn, data);
+                var result = touchjs.touch(args[i], extn);
                 if(result.success) {
                     suc_count++;
                 } else {
@@ -49,7 +49,7 @@ for(let i=0; i<args.length; i++) {
 
     // Check for file output and function call
     if(file_put && i<=args.length) {
-        var result = touchjs.touch(args[i], extn, data);
+        var result = touchjs.touch(args[i], extn);
         if(result.success) {
             suc_count++;
         } else {

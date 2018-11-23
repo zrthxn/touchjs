@@ -1,9 +1,9 @@
 const fs = require('fs');
 const version = 'v' + require('./package.json').version;
-var touch = function (file, extn, data) {
+var touch = function (file, extn) {
     var success = null, errors = null;
     try {
-        fs.writeFileSync(file + extn , data, null);
+        fs.writeFileSync(file + extn , null);
         success = true;
     } catch (err) {
         console.log(err, typeof err);

@@ -25,11 +25,21 @@ for(let i=0; i<args.length; i++) {
         // Set extension for next file
         if (args[i+1].match(/.*/)) {
             extn = args[i+1];
-            file_put = true;
+            i+=2;
+            while((args[i]!=='-e' || args[i]!=='--extn' || args[i]==='--logs') && i<=arr.length) {
+                var result = touchjs.touch(args[i], extn, data);
+                if(result.success) {
+                    suc_count++;
+                } else {
+                    err_files.push(result);
+                }
+                i++;
+            }
+            file_put = false;
         } else {
             throw "Invalid Extension";
         }
-        i+=2;
+        
     } else if(args[i]==='--logs') {
         logs = true;
         file_put = false;
@@ -38,7 +48,7 @@ for(let i=0; i<args.length; i++) {
     }
 
     // Check for file output and function call
-    if(file_put) {
+    if(file_put && i<=arr.length) {
         var result = touchjs.touch(args[i], extn, data);
         if(result.success) {
             suc_count++;

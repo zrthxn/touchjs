@@ -48,7 +48,7 @@ for(let i=0; i<args.length; i++) {
     }
 
     // Check for file output and function call
-    if(file_put && i<=arr.length) {
+    if(file_put && i<=args.length) {
         var result = touchjs.touch(args[i], extn, data);
         if(result.success) {
             suc_count++;

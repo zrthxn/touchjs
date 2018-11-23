@@ -26,7 +26,7 @@ for(let i=0; i<args.length; i++) {
         if (args[i+1].match(/.*/)) {
             extn = args[i+1];
             i+=2;
-            while((args[i]!=='-e' || args[i]!=='--extn' || args[i]==='--logs') && i<=arr.length) {
+            while((args[i]!=='-e' || args[i]!=='--extn' || args[i]==='--logs') && i<=args.length) {
                 var result = touchjs.touch(args[i], extn, data);
                 if(result.success) {
                     suc_count++;

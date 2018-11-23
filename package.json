@@ -1,6 +1,6 @@
 {
   "name": "@zrthxn/touchjs",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "A Node package for all your touching needs. Easily create empty files.",
   "main": "./index.js",
   "scripts": {

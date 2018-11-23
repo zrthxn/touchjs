@@ -1,5 +1,5 @@
 # Node Touch CLI
-### v1.2.1
+### v1.2.2
 
 This is a small CLI to create empty files.<br>
 Touch is available in Linux systems and is a useful tool to create lots of files quickly. It's particularly helpful to web developers and 
@@ -12,7 +12,7 @@ Also, this was inspired from Borland's Touch CLI which used to come bundled with
 
 
 ## Installation
-You will need to have installed Node for this to work. Open a terminal window anywhere and run :
+You will need to have installed Node for this to work. Open a terminal window and run
 ```
 npm install -g @zrthxn/touchjs
 ```

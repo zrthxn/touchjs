@@ -3,7 +3,7 @@ const version = 'v' + require('./package.json').version;
 var touch = function (file, extn) {
     var success = null, errors = null;
     try {
-        fs.writeFileSync(file + extn , null);
+        fs.writeFileSync(file + extn, '');
         success = true;
     } catch (err) {
         console.log(err, typeof err);
@@ -28,8 +28,10 @@ var helpDisp = function () {
     console.log('      >   touch [flags] [extns] [args]');
     console.log('');
     console.log('  The following flags are currently available with Touch');
-    console.log('  --help or -h :      Display Help Menu');
-    console.log('  --extn or -e :      Use a common extension for all the following files. Supply the extension after the flag. Eg : touch -e .txt file_1 file_2 file_3');
+    console.log('  --help or -h : Display Help Menu');
+    console.log('  --version or -v : Display version number');
+    console.log('  --extn or -e : Use a common extension for all the following files. Supply the extension after the flag. Eg : touch -e .txt file_1 file_2 file_3');
+    console.log('  --logs : Display Error logs (if any)');
     console.log('');
 }
 
@@ -48,11 +50,15 @@ var outrowDisp = function (logs, suc_count, err_files) {
         console.log(suc_count +' Added, '+ err_files.length + ' Errors');
         if(logs) {
             console.log('\n--- LOGS ---\n');
-            err_files.forEach((file)=>{
-                console.log('File: ' + file.filename);
-                console.log('Error: ' + file.errors);
-                console.log('');
-            });
+            if(err_files.length===0) {
+                console.log('No Error Logs');
+            } else {
+                err_files.forEach((file)=>{
+                    console.log('File: ' + file.filename);
+                    console.log('Error: ' + file.errors);
+                    console.log('');
+                });
+            }
         }
     });
 }

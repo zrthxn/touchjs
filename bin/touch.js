@@ -11,12 +11,6 @@ var sync = false,
     data = null;
 
 for(let i=0; i<args.length; i++) {
-    file_put = false;
-    logs = false;
-    sync = false,
-    extn = "";
-    data = null;
-
     if(args[i]==='-v' || args[i]==='--version') {
         touchjs.versionDisp('short', ()=>{});
     } else if(args[i]==='-h' || args[i]==='--help') {
@@ -26,16 +20,7 @@ for(let i=0; i<args.length; i++) {
         if (args[i+1].match(/.*/)) {
             extn = args[i+1];
             i+=2;
-            while(!(args[i]==='-e' || args[i]==='--extn' || args[i]==='--logs') && i<args.length) {
-                var result = touchjs.touch(args[i], extn);
-                if(result.success) {
-                    suc_count++;
-                } else {
-                    err_files.push(result);
-                }
-                i++;
-            }
-            file_put = false;
+            file_put = true;
         } else {
             throw "Invalid Extension";
         }
@@ -48,7 +33,7 @@ for(let i=0; i<args.length; i++) {
     }
 
     // Check for file output and function call
-    if(file_put && i<=args.length) {
+    if(file_put) {
         var result = touchjs.touch(args[i], extn);
         if(result.success) {
             suc_count++;

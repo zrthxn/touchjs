@@ -1,5 +1,6 @@
 # Node Touch CLI
 ### v1.2.10
+[![HitCount](http://hits.dwyl.io/zrthxn/touchjs.svg)](http://hits.dwyl.io/zrthxn/touchjs)
 
 This is a small CLI to create empty files.<br>
 Touch is available in Linux systems and is a useful tool to create lots of files quickly. It's particularly helpful to web developers and 

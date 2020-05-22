@@ -4,14 +4,14 @@ const inquirer = require('inquirer')
 import touchjs from './touch'
 import { version, help, outrow } from './utils'
 
-var args = process.argv.splice(process.execArgv.length + 2);
-var err_files = [], suc_count = 0;
+var args = process.argv.splice(process.execArgv.length + 2)
+var err_files = [], suc_count = 0
 
-var file_put = false;
-var logs = false;
+var file_put = false
+var logs = false
 var sync = false,
     extn = "",
-    data = null;
+    data = null
 
 for(let i=0; i<args.length; i++) {
 	if(args[i]==='-v' || args[i]==='--version') {
@@ -21,29 +21,29 @@ for(let i=0; i<args.length; i++) {
 	} else if(args[i]==='-e' || args[i]==='--extn') {
 		// Set extension for next file
 		if (args[i+1].match(/.*/)) {
-			extn = args[i+1];
-			i+=2;
-			file_put = true;
+			extn = args[i+1]
+			i+=2
+			file_put = true
 		} else {
-			throw "Invalid Extension";
+			throw "Invalid Extension"
 		}
 			
 	} else if(args[i]==='--logs') {
-		logs = true;
-		file_put = false;
+		logs = true
+		file_put = false
 	} else {
-		file_put = true;
+		file_put = true
 	}
 
 	// Check for file output and function call
 	if(file_put) {
-		var result = touchjs(args[i], extn);
+		var result = touchjs(args[i], extn)
 		if(result.success)
-			suc_count++;
+			suc_count++
 		else
-			err_files.push(result);
+			err_files.push(result)
 	}
 }
 
 if(suc_count!==0)
-	outrow(logs, suc_count, err_files);
+	outrow(logs, suc_count, err_files)

@@ -1,14 +1,14 @@
 {
   "name": "@zrthxn/touchjs",
-  "version": "1.2.10",
-  "description": "A Node package for all your touching needs. Easily create empty files.",
-  "main": "./index.js",
+  "version": "2.0.0",
+  "description": "A Node Boilerplate Generator.",
+  "main": "./build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf build && tsc"
   },
   "preferGlobal": true,
   "bin": {
-    "touchjs": "./bin/touch.js"
+    "touchjs": "./build/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,9 @@
   "keywords": [
     "touch",
     "create",
+    "boilerplate",
+    "generator",
+    "gen",
     "file",
     "global",
     "cli",
@@ -26,5 +29,10 @@
   "license": "MIT",
   "dependencies": {
     "inquirer": "^7.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.5",
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.9.3"
   }
 }
